@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "uptime-sentinel"
+version = "0.1.0"
+description = "A lightweight concurrent HTTP availability monitor with SQLite history and webhook alerts"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Nina Martins" }]
+license = {text = "MIT"}
+
+[project.scripts]
+sentinel = "sentinel.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
